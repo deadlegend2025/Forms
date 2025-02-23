@@ -57,8 +57,7 @@ npm run dev  # or yarn dev
   ├── README.md
 ```
 
-## Contributing
-Feel free to submit issues and pull requests!
+
 
 
 
