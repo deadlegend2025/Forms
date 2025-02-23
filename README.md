@@ -1,50 +1,64 @@
-# React + TypeScript + Vite
+# Form Validation with Zod in TypeScript & React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based form validation project using **Zod**, **TypeScript**, and **React Hook Form**. It ensures robust input validation, including email verification via an API endpoint.
 
-Currently, two official plugins are available:
+## Features
+- **Zod Schema Validation** for form inputs
+- **TypeScript** for type safety
+- **React Hook Form** for efficient form handling
+- **Email validation** via an API endpoint
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation & Setup
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1. Clone the Repository
+```sh
+git clone https://github.com/yourusername/your-repo.git
+cd your-repo
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2. Install Dependencies
+```sh
+npm install  # or yarn install
 ```
+
+### 3. Set API Endpoint
+Update the file `userForms4.tsx` with your API endpoint for email validation:
+```ts
+const API_ENDPOINT = "https://your-api-url.com/validate-email";
+```
+
+### 4. Start the Development Server
+```sh
+npm run dev  # or yarn dev
+```
+
+## Usage
+- Fill out the form fields.
+- Form will validate fields using Zod.
+- Email field validation will be checked against your API.
+- If all validations pass, the form can be submitted successfully.
+
+## Tech Stack
+- **React** (Frontend framework)
+- **TypeScript** (Static typing)
+- **Zod** (Schema validation)
+- **React Hook Form** (Form handling)
+
+## Folder Structure
+```
+/project-root
+  ├── src/
+  │   ├── components/
+  │   │   ├── Form.tsx
+  │   │   ├── userForms4.tsx  # API validation logic
+  │   ├── App.tsx
+  │   ├── main.tsx
+  ├── package.json
+  ├── README.md
+```
+
+## Contributing
+Feel free to submit issues and pull requests!
+
+
+
